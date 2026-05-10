@@ -1,7 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { MessageCircle, Instagram, MapPin, Music2, Moon, Sun, Heart, PawPrint, Home, Sparkles } from "lucide-react";
+import { Instagram, MapPin, Music2, Moon, Sun, Heart, PawPrint, Home, Sparkles } from "lucide-react";
 import logo from "@/assets/logo.png";
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden className={className}>
+      <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.214-.487.214-.946.142-1.018-.072-.13-.27-.187-.554-.33z"/>
+      <path d="M16.207 4C9.413 4 4.005 9.408 4.005 16.202c0 2.163.573 4.296 1.652 6.158L4 28l5.81-1.52a12.142 12.142 0 0 0 6.394 1.823h.005c6.789 0 12.318-5.408 12.318-12.202 0-3.288-1.402-6.378-3.726-8.701A12.072 12.072 0 0 0 16.207 4zm0 22.42h-.004a10.13 10.13 0 0 1-5.166-1.415l-.371-.22-3.45.904.92-3.36-.241-.385a10.118 10.118 0 0 1-1.55-5.4c0-5.605 4.561-10.166 10.166-10.166a10.07 10.07 0 0 1 7.18 2.985 10.07 10.07 0 0 1 2.972 7.187c0 5.606-4.561 10.167-10.167 10.167z"/>
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   component: BioLink,
