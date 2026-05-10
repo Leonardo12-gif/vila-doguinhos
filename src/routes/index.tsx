@@ -64,10 +64,26 @@ function BioLink() {
         aria-hidden
         className="pointer-events-none absolute -right-20 -bottom-24 w-[520px] max-w-[80vw] opacity-[0.04] select-none"
       />
-      {/* floating paws */}
-      <PawPrint aria-hidden className="pointer-events-none absolute top-24 left-6 h-8 w-8 text-primary/15 animate-float" style={{ ['--r' as string]: '-18deg' }} />
-      <PawPrint aria-hidden className="pointer-events-none absolute top-[40%] right-8 h-10 w-10 text-primary/10 animate-float" style={{ ['--r' as string]: '20deg', animationDelay: '1.2s' }} />
-      <PawPrint aria-hidden className="pointer-events-none absolute bottom-40 left-10 h-6 w-6 text-primary/15 animate-float" style={{ ['--r' as string]: '10deg', animationDelay: '2.4s' }} />
+      {/* floating paws scattered across background */}
+      {[
+        { c: "top-20 left-4", s: "h-8 w-8", o: "text-primary/15", r: "-18deg", d: "0s" },
+        { c: "top-32 right-6", s: "h-6 w-6", o: "text-primary/10", r: "24deg", d: "0.6s" },
+        { c: "top-[28%] left-10", s: "h-5 w-5", o: "text-primary/15", r: "-30deg", d: "1.1s" },
+        { c: "top-[42%] right-4", s: "h-10 w-10", o: "text-primary/10", r: "20deg", d: "1.4s" },
+        { c: "top-[55%] left-2", s: "h-7 w-7", o: "text-earth/20", r: "12deg", d: "1.9s" },
+        { c: "top-[68%] right-10", s: "h-6 w-6", o: "text-primary/15", r: "-15deg", d: "2.3s" },
+        { c: "bottom-44 left-8", s: "h-9 w-9", o: "text-primary/15", r: "8deg", d: "2.6s" },
+        { c: "bottom-24 right-6", s: "h-5 w-5", o: "text-earth/20", r: "-22deg", d: "3.1s" },
+        { c: "bottom-10 left-1/3", s: "h-6 w-6", o: "text-primary/10", r: "16deg", d: "3.6s" },
+        { c: "top-[15%] left-1/2", s: "h-4 w-4", o: "text-primary/10", r: "-8deg", d: "4s" },
+      ].map((p, i) => (
+        <PawPrint
+          key={i}
+          aria-hidden
+          className={`pointer-events-none absolute ${p.c} ${p.s} ${p.o} animate-float`}
+          style={{ ['--r' as string]: p.r, animationDelay: p.d }}
+        />
+      ))}
 
       {/* theme toggle */}
       <button
