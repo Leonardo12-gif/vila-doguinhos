@@ -131,7 +131,7 @@ function BioLink() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-border bg-card px-4 py-4 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+              className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md px-4 py-4 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
               style={delay(4 + i)}
             >
               <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
