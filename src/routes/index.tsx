@@ -58,11 +58,12 @@ function BioLink() {
   return (
     <main className="relative min-h-screen overflow-hidden font-body">
       {/* watermark logo */}
+      {/* watermark logo - centered, full logo visible */}
       <img
         src={logo}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -right-20 -bottom-24 w-[520px] max-w-[80vw] opacity-[0.04] select-none"
+        className="pointer-events-none fixed left-1/2 top-1/2 w-[420px] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.05] select-none"
       />
       {/* floating paws scattered across background */}
       {[
@@ -97,7 +98,11 @@ function BioLink() {
       <div className="relative z-10 mx-auto flex max-w-md flex-col px-5 pb-14 pt-12 sm:pt-16">
         {/* Logo */}
         <div className="animate-vd-in flex justify-center" style={delay(0)}>
-          <img src={logo} alt="Vila Doguinho's" className="h-44 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.12)]" />
+          <div className="rounded-full bg-card p-3 shadow-glow ring-1 ring-border">
+            <div className="flex h-40 w-40 items-center justify-center rounded-full bg-background">
+              <img src={logo} alt="Vila Doguinho's" className="h-[88%] w-[88%] object-contain" />
+            </div>
+          </div>
         </div>
 
         {/* Title */}
