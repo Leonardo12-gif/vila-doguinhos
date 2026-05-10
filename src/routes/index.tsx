@@ -96,12 +96,15 @@ function BioLink() {
       </button>
 
       <div className="relative z-10 mx-auto flex max-w-md flex-col px-5 pb-14 pt-12 sm:pt-16">
-        {/* Logo */}
+        {/* Logo - transparent, with soft orange glow */}
         <div className="animate-vd-in flex justify-center" style={delay(0)}>
-          <div className="rounded-full bg-card p-3 shadow-glow ring-1 ring-border">
-            <div className="flex h-40 w-40 items-center justify-center rounded-full bg-background">
-              <img src={logo} alt="Vila Doguinho's" className="h-[88%] w-[88%] object-contain" />
-            </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-full bg-primary/30 blur-3xl" aria-hidden />
+            <img
+              src={logo}
+              alt="Vila Doguinho's"
+              className="h-44 w-auto drop-shadow-[0_8px_24px_oklch(0.72_0.18_47/0.25)]"
+            />
           </div>
         </div>
 
