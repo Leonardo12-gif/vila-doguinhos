@@ -126,8 +126,8 @@ function BioLink() {
               className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-border bg-card px-4 py-4 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
               style={delay(4 + i)}
             >
-              <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'primary' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
-                <c.icon className="h-5 w-5" />
+              <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
+                <c.icon className={c.accent === 'whatsapp' ? 'h-6 w-6' : 'h-5 w-5'} />
               </span>
               <span className="flex flex-1 flex-col text-left">
                 <span className="font-display text-base font-semibold text-card-foreground">{c.label}</span>
