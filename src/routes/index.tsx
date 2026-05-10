@@ -40,7 +40,7 @@ function BioLink() {
   }, [dark]);
 
   const cards = [
-    { icon: MessageCircle, label: "Falar no WhatsApp", sub: "Resposta rápida", href: WHATSAPP_URL, accent: "primary" },
+    { icon: WhatsAppIcon, label: "Falar no WhatsApp", sub: "Resposta rápida", href: WHATSAPP_URL, accent: "whatsapp" },
     { icon: Instagram, label: "Instagram", sub: "@villadoguinhos", href: INSTAGRAM_URL },
     { icon: Music2, label: "TikTok", sub: "@villa.doguinhos", href: TIKTOK_URL },
   ];
