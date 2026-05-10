@@ -90,7 +90,7 @@ function BioLink() {
       <button
         onClick={() => setDark((d) => !d)}
         aria-label="Alternar tema"
-        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/70 backdrop-blur shadow-soft transition hover:scale-105 hover:bg-card"
+        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/70 backdrop-blur-md shadow-soft transition hover:scale-105 hover:bg-card"
       >
         {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </button>
@@ -196,7 +196,7 @@ function BioLink() {
             {features.map((f, i) => (
               <li
                 key={f.text}
-                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-border bg-card/70 px-3 py-2.5 backdrop-blur ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
+                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-white/60 bg-white/60 px-3 py-2.5 backdrop-blur-md ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
                 style={delay(9 + i)}
               >
                 <f.icon className="h-4 w-4 shrink-0 text-primary" />
