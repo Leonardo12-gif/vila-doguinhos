@@ -97,11 +97,7 @@ function BioLink() {
       <div className="relative z-10 mx-auto flex max-w-md flex-col px-5 pb-14 pt-12 sm:pt-16">
         {/* Logo */}
         <div className="animate-vd-in flex justify-center" style={delay(0)}>
-          <div className="rounded-full bg-card p-2 shadow-glow ring-1 ring-border">
-            <div className="rounded-full bg-background p-3">
-              <img src={logo} alt="Vila Doguinho's" className="h-32 w-32 rounded-full object-contain" />
-            </div>
-          </div>
+          <img src={logo} alt="Vila Doguinho's" className="h-44 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.12)]" />
         </div>
 
         {/* Title */}
