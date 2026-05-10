@@ -58,12 +58,12 @@ function BioLink() {
   return (
     <main className="relative min-h-screen overflow-hidden font-body">
       {/* watermark logo */}
-      {/* watermark logo - centered, full logo visible */}
+      {/* watermark logo - very subtle */}
       <img
         src={logo}
         alt=""
         aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/2 w-[420px] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.05] select-none"
+        className="pointer-events-none fixed left-1/2 top-1/2 w-[260px] max-w-[55vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.025] blur-[0.5px] select-none"
       />
       {/* floating paws scattered across background */}
       {[
@@ -90,18 +90,21 @@ function BioLink() {
       <button
         onClick={() => setDark((d) => !d)}
         aria-label="Alternar tema"
-        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/70 backdrop-blur shadow-soft transition hover:scale-105 hover:bg-card"
+        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/70 backdrop-blur-md shadow-soft transition hover:scale-105 hover:bg-card"
       >
         {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </button>
 
       <div className="relative z-10 mx-auto flex max-w-md flex-col px-5 pb-14 pt-12 sm:pt-16">
-        {/* Logo */}
+        {/* Logo - transparent, with soft orange glow */}
         <div className="animate-vd-in flex justify-center" style={delay(0)}>
-          <div className="rounded-full bg-card p-3 shadow-glow ring-1 ring-border">
-            <div className="flex h-40 w-40 items-center justify-center rounded-full bg-background">
-              <img src={logo} alt="Vila Doguinho's" className="h-[88%] w-[88%] object-contain" />
-            </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-full bg-primary/30 blur-3xl" aria-hidden />
+            <img
+              src={logo}
+              alt="Vila Doguinho's"
+              className="h-44 w-auto drop-shadow-[0_8px_24px_oklch(0.72_0.18_47/0.25)]"
+            />
           </div>
         </div>
 
@@ -128,7 +131,7 @@ function BioLink() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-border bg-card px-4 py-4 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+              className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md px-4 py-4 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
               style={delay(4 + i)}
             >
               <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
@@ -145,7 +148,7 @@ function BioLink() {
           {/* Location toggle */}
           <button
             onClick={() => setMapOpen((o) => !o)}
-            className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-border bg-card px-4 py-4 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+            className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
             style={delay(7)}
             aria-expanded={mapOpen}
           >
@@ -193,7 +196,7 @@ function BioLink() {
             {features.map((f, i) => (
               <li
                 key={f.text}
-                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-border bg-card/70 px-3 py-2.5 backdrop-blur ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
+                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-white/60 bg-white/60 px-3 py-2.5 backdrop-blur-md ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
                 style={delay(9 + i)}
               >
                 <f.icon className="h-4 w-4 shrink-0 text-primary" />
