@@ -72,14 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Vila Doguinhos" },
+      { name: "description", content: "Onde seu doguinho se sente em casa
+Creche e hotel com diversão garantida, muito amor, cuidado e brincadeiras na Mooca." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Vila Doguinhos" },
+      { property: "og:description", content: "Onde seu doguinho se sente em casa
+Creche e hotel com diversão garantida, muito amor, cuidado e brincadeiras na Mooca." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vila Doguinhos" },
+      { name: "twitter:description", content: "Onde seu doguinho se sente em casa
+Creche e hotel com diversão garantida, muito amor, cuidado e brincadeiras na Mooca." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e8334eea-ac97-43cd-ae3a-e6ec7aa39cd0" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e8334eea-ac97-43cd-ae3a-e6ec7aa39cd0" },
     ],
     links: [
       {
