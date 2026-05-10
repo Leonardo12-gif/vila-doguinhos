@@ -58,12 +58,12 @@ function BioLink() {
   return (
     <main className="relative min-h-screen overflow-hidden font-body">
       {/* watermark logo */}
-      {/* watermark logo - centered, full logo visible */}
+      {/* watermark logo - very subtle */}
       <img
         src={logo}
         alt=""
         aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/2 w-[420px] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.05] select-none"
+        className="pointer-events-none fixed left-1/2 top-1/2 w-[260px] max-w-[55vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.025] blur-[0.5px] select-none"
       />
       {/* floating paws scattered across background */}
       {[
