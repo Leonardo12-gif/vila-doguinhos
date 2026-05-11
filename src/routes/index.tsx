@@ -157,7 +157,7 @@ function BioLink() {
             style={delay(7)}
             aria-expanded={mapOpen}
           >
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-earth transition group-hover:scale-110">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition group-hover:scale-110">
               <MapPin className="h-5 w-5" />
             </span>
             <span className="flex flex-1 flex-col">
