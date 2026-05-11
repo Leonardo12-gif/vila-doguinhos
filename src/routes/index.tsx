@@ -57,14 +57,11 @@ function BioLink() {
 
   return (
     <main className="relative min-h-screen overflow-hidden font-body">
-      {/* watermark logo */}
-      {/* watermark logo - very subtle */}
-      <img
-        src={logo}
-        alt=""
-        aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/2 w-[260px] max-w-[55vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.025] blur-[0.5px] select-none"
-      />
+      {/* organic blobs */}
+      <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-[42%_58%_62%_38%/45%_40%_60%_55%] bg-primary/15 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-20 top-40 h-64 w-64 rounded-[58%_42%_40%_60%/55%_60%_40%_45%] bg-accent/40 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -left-16 bottom-40 h-72 w-72 rounded-[55%_45%_60%_40%/50%_55%_45%_50%] bg-primary/10 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-24 h-80 w-80 rounded-[45%_55%_42%_58%/55%_45%_55%_45%] bg-accent/35 blur-2xl" />
       {/* floating paws scattered across background */}
       {[
         { c: "top-20 left-4", s: "h-8 w-8", o: "text-primary/15", r: "-18deg", d: "0s" },
