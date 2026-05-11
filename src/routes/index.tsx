@@ -198,30 +198,40 @@ function BioLink() {
             <PawPrint className="h-5 w-5 text-primary" />
             Nossos diferenciais
           </h3>
-          <ul className="grid grid-cols-2 gap-2.5">
+          <ul className="grid grid-cols-3 gap-2.5 sm:grid-cols-5">
             {features.map((f, i) => (
               <li
                 key={f.text}
-                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-white/60 bg-white/60 px-3 py-2.5 backdrop-blur-md ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
+                className="animate-vd-in flex flex-col items-center gap-2 rounded-2xl border border-white/70 bg-white/80 px-2 py-4 text-center shadow-soft backdrop-blur-md"
                 style={delay(9 + i)}
               >
-                <f.icon className="h-4 w-4 shrink-0 text-primary" />
-                <span className="text-xs font-medium text-card-foreground">{f.text}</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                  <f.icon className="h-5 w-5 text-primary" />
+                </span>
+                <span className="text-[11px] font-semibold leading-tight text-card-foreground">{f.text}</span>
               </li>
             ))}
           </ul>
         </section>
 
         {/* Footer */}
-        <footer className="animate-vd-in mt-12 text-center" style={delay(15)}>
-          <a
-            href="https://www.frezamarketing.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-muted-foreground transition hover:text-primary"
-          >
-            Desenvolvido por <span className="font-semibold">Frezza Marketing</span>
-          </a>
+        <footer className="animate-vd-in mt-12 flex flex-col items-center gap-1 text-center" style={delay(15)}>
+          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <Heart className="h-3.5 w-3.5 text-primary" />
+            <span>
+              Desenvolvido por{" "}
+              <a
+                href="https://www.frezamarketing.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-primary hover:underline"
+              >
+                Frezza Marketing
+              </a>
+            </span>
+            <PawPrint className="h-3.5 w-3.5 text-primary" />
+          </div>
+          <p className="text-[11px] text-muted-foreground">Especialistas em conectar marcas e pessoas</p>
         </footer>
       </div>
     </main>
