@@ -87,7 +87,7 @@ function BioLink() {
       <button
         onClick={() => setDark((d) => !d)}
         aria-label="Alternar tema"
-        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/70 backdrop-blur-md shadow-soft transition hover:scale-105 hover:bg-card"
+        className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/80 backdrop-blur-md shadow-soft transition hover:scale-105 hover:bg-card"
       >
         {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </button>
@@ -136,7 +136,7 @@ function BioLink() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/70 bg-white/80 backdrop-blur-md px-4 py-4 pl-5 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
+              className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-border bg-card/85 backdrop-blur-md px-4 py-4 pl-5 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
               style={delay(4 + i)}
             >
               <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
@@ -153,7 +153,7 @@ function BioLink() {
           {/* Location toggle */}
           <button
             onClick={() => setMapOpen((o) => !o)}
-            className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/70 bg-white/80 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 pl-5 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
+            className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-border bg-card/85 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 pl-5 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
             style={delay(7)}
             aria-expanded={mapOpen}
           >
@@ -202,7 +202,7 @@ function BioLink() {
             {features.map((f, i) => (
               <li
                 key={f.text}
-                className="animate-vd-in flex flex-col items-center gap-2 rounded-2xl border border-white/70 bg-white/80 px-2 py-4 text-center shadow-soft backdrop-blur-md"
+                className="animate-vd-in flex flex-col items-center gap-2 rounded-2xl border border-border bg-card/85 px-2 py-4 text-center shadow-soft backdrop-blur-md"
                 style={delay(9 + i)}
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
