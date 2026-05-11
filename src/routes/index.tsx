@@ -113,10 +113,18 @@ function BioLink() {
           </p>
         </div>
 
-        <h2 className="animate-vd-in mt-6 text-center text-xl font-semibold text-foreground sm:text-2xl" style={delay(2)}>
-          Onde seu doguinho se sente em casa
+        <div className="animate-vd-in mt-6 flex justify-center" style={delay(2)}>
+          <span className="relative inline-flex h-9 w-9 items-center justify-center">
+            <Heart className="h-6 w-6 fill-primary text-primary" />
+            <span className="absolute -top-0.5 left-1/2 h-2 w-px -translate-x-1/2 bg-primary/70" />
+            <span className="absolute top-0.5 left-1 h-2 w-px rotate-[-35deg] bg-primary/70" />
+            <span className="absolute top-0.5 right-1 h-2 w-px rotate-[35deg] bg-primary/70" />
+          </span>
+        </div>
+        <h2 className="animate-vd-in mt-2 text-center text-3xl font-bold leading-tight text-foreground sm:text-4xl" style={delay(2)}>
+          Onde seu <span className="text-primary">doguinho</span><br/>se sente em casa
         </h2>
-        <p className="animate-vd-in mt-2 text-center text-sm leading-relaxed text-muted-foreground" style={delay(3)}>
+        <p className="animate-vd-in mt-3 text-center text-sm leading-relaxed text-muted-foreground" style={delay(3)}>
           Creche e hotel com diversão garantida, muito amor, cuidado e brincadeiras na Mooca.
         </p>
 
