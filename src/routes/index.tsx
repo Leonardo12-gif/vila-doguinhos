@@ -194,7 +194,8 @@ function BioLink() {
 
         {/* Features */}
         <section className="animate-vd-in mt-10" style={delay(8)}>
-          <h3 className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <h3 className="mb-4 flex items-center justify-center gap-2 text-base font-bold text-foreground">
+            <PawPrint className="h-5 w-5 text-primary" />
             Nossos diferenciais
           </h3>
           <ul className="grid grid-cols-2 gap-2.5">
