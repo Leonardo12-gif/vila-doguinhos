@@ -153,7 +153,7 @@ function BioLink() {
           {/* Location toggle */}
           <button
             onClick={() => setMapOpen((o) => !o)}
-            className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+            className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/70 bg-white/80 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 pl-5 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
             style={delay(7)}
             aria-expanded={mapOpen}
           >
