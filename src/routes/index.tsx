@@ -57,14 +57,11 @@ function BioLink() {
 
   return (
     <main className="relative min-h-screen overflow-hidden font-body">
-      {/* watermark logo */}
-      {/* watermark logo - very subtle */}
-      <img
-        src={logo}
-        alt=""
-        aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/2 w-[260px] max-w-[55vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.025] blur-[0.5px] select-none"
-      />
+      {/* organic blobs */}
+      <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-[42%_58%_62%_38%/45%_40%_60%_55%] bg-primary/15 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-20 top-40 h-64 w-64 rounded-[58%_42%_40%_60%/55%_60%_40%_45%] bg-accent/40 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -left-16 bottom-40 h-72 w-72 rounded-[55%_45%_60%_40%/50%_55%_45%_50%] bg-primary/10 blur-2xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-24 h-80 w-80 rounded-[45%_55%_42%_58%/55%_45%_55%_45%] bg-accent/35 blur-2xl" />
       {/* floating paws scattered across background */}
       {[
         { c: "top-20 left-4", s: "h-8 w-8", o: "text-primary/15", r: "-18deg", d: "0s" },
@@ -116,10 +113,18 @@ function BioLink() {
           </p>
         </div>
 
-        <h2 className="animate-vd-in mt-6 text-center text-xl font-semibold text-foreground sm:text-2xl" style={delay(2)}>
-          Onde seu doguinho se sente em casa
+        <div className="animate-vd-in mt-6 flex justify-center" style={delay(2)}>
+          <span className="relative inline-flex h-9 w-9 items-center justify-center">
+            <Heart className="h-6 w-6 fill-primary text-primary" />
+            <span className="absolute -top-0.5 left-1/2 h-2 w-px -translate-x-1/2 bg-primary/70" />
+            <span className="absolute top-0.5 left-1 h-2 w-px rotate-[-35deg] bg-primary/70" />
+            <span className="absolute top-0.5 right-1 h-2 w-px rotate-[35deg] bg-primary/70" />
+          </span>
+        </div>
+        <h2 className="animate-vd-in mt-2 text-center text-3xl font-bold leading-tight text-foreground sm:text-4xl" style={delay(2)}>
+          Onde seu <span className="text-primary">doguinho</span><br/>se sente em casa
         </h2>
-        <p className="animate-vd-in mt-2 text-center text-sm leading-relaxed text-muted-foreground" style={delay(3)}>
+        <p className="animate-vd-in mt-3 text-center text-sm leading-relaxed text-muted-foreground" style={delay(3)}>
           Creche e hotel com diversão garantida, muito amor, cuidado e brincadeiras na Mooca.
         </p>
 
@@ -131,7 +136,7 @@ function BioLink() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md px-4 py-4 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+              className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/70 bg-white/80 backdrop-blur-md px-4 py-4 pl-5 shadow-soft ring-1 ring-black/[0.02] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
               style={delay(4 + i)}
             >
               <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.accent === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-secondary text-earth'} transition group-hover:scale-110`}>
@@ -148,11 +153,11 @@ function BioLink() {
           {/* Location toggle */}
           <button
             onClick={() => setMapOpen((o) => !o)}
-            className="animate-vd-in group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40"
+            className="animate-vd-in group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/70 bg-white/80 backdrop-blur-md ring-1 ring-black/[0.02] px-4 py-4 pl-5 text-left shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow hover:border-primary/40 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-1.5 before:rounded-full before:bg-primary"
             style={delay(7)}
             aria-expanded={mapOpen}
           >
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-earth transition group-hover:scale-110">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition group-hover:scale-110">
               <MapPin className="h-5 w-5" />
             </span>
             <span className="flex flex-1 flex-col">
@@ -189,33 +194,44 @@ function BioLink() {
 
         {/* Features */}
         <section className="animate-vd-in mt-10" style={delay(8)}>
-          <h3 className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <h3 className="mb-4 flex items-center justify-center gap-2 text-base font-bold text-foreground">
+            <PawPrint className="h-5 w-5 text-primary" />
             Nossos diferenciais
           </h3>
-          <ul className="grid grid-cols-2 gap-2.5">
+          <ul className="grid grid-cols-3 gap-2.5 sm:grid-cols-5">
             {features.map((f, i) => (
               <li
                 key={f.text}
-                className={`animate-vd-in flex items-center gap-2 rounded-xl border border-white/60 bg-white/60 px-3 py-2.5 backdrop-blur-md ${i === features.length - 1 ? 'col-span-2 justify-center' : ''}`}
+                className="animate-vd-in flex flex-col items-center gap-2 rounded-2xl border border-white/70 bg-white/80 px-2 py-4 text-center shadow-soft backdrop-blur-md"
                 style={delay(9 + i)}
               >
-                <f.icon className="h-4 w-4 shrink-0 text-primary" />
-                <span className="text-xs font-medium text-card-foreground">{f.text}</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                  <f.icon className="h-5 w-5 text-primary" />
+                </span>
+                <span className="text-[11px] font-semibold leading-tight text-card-foreground">{f.text}</span>
               </li>
             ))}
           </ul>
         </section>
 
         {/* Footer */}
-        <footer className="animate-vd-in mt-12 text-center" style={delay(15)}>
-          <a
-            href="https://www.frezamarketing.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-muted-foreground transition hover:text-primary"
-          >
-            Desenvolvido por <span className="font-semibold">Frezza Marketing</span>
-          </a>
+        <footer className="animate-vd-in mt-12 flex flex-col items-center gap-1 text-center" style={delay(15)}>
+          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <Heart className="h-3.5 w-3.5 text-primary" />
+            <span>
+              Desenvolvido por{" "}
+              <a
+                href="https://www.frezamarketing.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-primary hover:underline"
+              >
+                Frezza Marketing
+              </a>
+            </span>
+            <PawPrint className="h-3.5 w-3.5 text-primary" />
+          </div>
+          <p className="text-[11px] text-muted-foreground">Especialistas em conectar marcas e pessoas</p>
         </footer>
       </div>
     </main>
