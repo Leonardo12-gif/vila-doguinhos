@@ -1,6 +1,6 @@
-# Vila Doguinho's — Link da Bio
+# Villa Doguinho's — Link da Bio
 
-Link da bio profissional da Vila Doguinho's (creche e hotel pet na Mooca, SP), construído com **TanStack Start + React 19 + Vite 7 + Tailwind CSS v4**.
+Link da bio profissional da Villa Doguinho's (creche e hotel pet na Mooca, SP), construído com **TanStack Start + React 19 + Vite 7 + Tailwind CSS v4**.
 
 ## Desenvolvimento local
 

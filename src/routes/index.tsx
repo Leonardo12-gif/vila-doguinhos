@@ -16,16 +16,16 @@ export const Route = createFileRoute("/")({
   component: BioLink,
   head: () => ({
     meta: [
-      { title: "Vila Doguinho's — Creche e Hotel Pet na Mooca" },
+      { title: "Villa Doguinho's — Creche e Hotel Pet na Mooca" },
       { name: "description", content: "Onde seu doguinho se sente em casa. Creche e hotel pet na Mooca, SP. Diversão, carinho e cuidado para o seu melhor amigo." },
-      { property: "og:title", content: "Vila Doguinho's — Creche e Hotel Pet" },
+      { property: "og:title", content: "Villa Doguinho's — Creche e Hotel Pet" },
       { property: "og:description", content: "Onde seu doguinho se sente em casa. Mooca, SP." },
       { property: "og:type", content: "website" },
     ],
   }),
 });
 
-const WHATSAPP_URL = "https://wa.me/5511925859445?text=" + encodeURIComponent("Olá! Vim pelo link da bio e gostaria de saber mais sobre a Vila Doguinho's.");
+const WHATSAPP_URL = "https://wa.me/5511925859445?text=" + encodeURIComponent("Olá! Vim pelo link da bio e gostaria de saber mais sobre a Villa Doguinho's.");
 const INSTAGRAM_URL = "https://www.instagram.com/villadoguinhos";
 const TIKTOK_URL = "https://www.tiktok.com/@villa.doguinhos";
 const MAPS_EMBED = "https://www.google.com/maps?q=Rua+Pira%C3%A7ununga+1228+Mooca+SP&output=embed";
@@ -99,7 +99,7 @@ function BioLink() {
             <div className="absolute inset-0 -z-10 rounded-full bg-primary/30 blur-3xl" aria-hidden />
             <img
               src={logo}
-              alt="Vila Doguinho's"
+              alt="Villa Doguinho's"
               className="h-44 w-auto drop-shadow-[0_8px_24px_oklch(0.72_0.18_47/0.25)]"
             />
           </div>
@@ -107,7 +107,7 @@ function BioLink() {
 
         {/* Title */}
         <div className="animate-vd-in mt-5 text-center" style={delay(1)}>
-          <h1 className="text-3xl font-bold text-foreground">Vila Doguinho's</h1>
+          <h1 className="text-3xl font-bold text-foreground">Villa Doguinho's</h1>
           <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
             Creche · Hotel Pet
           </p>
@@ -173,7 +173,7 @@ function BioLink() {
             <div className="min-h-0">
               <div className="overflow-hidden rounded-2xl border border-border shadow-soft">
                 <iframe
-                  title="Mapa Vila Doguinho's"
+                  title="Mapa Villa Doguinho's"
                   src={MAPS_EMBED}
                   className="h-56 w-full"
                   loading="lazy"
