@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Instagram, MapPin, Music2, Moon, Sun, Heart, PawPrint, Home, Sparkles } from "lucide-react";
+import { Instagram, MapPin, Music2, Moon, Sun, Heart, PawPrint, Home, Sparkles, ShieldCheck } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -51,6 +51,7 @@ function BioLink() {
     { icon: Heart, text: "Muito amor e cuidado" },
     { icon: PawPrint, text: "Pensado para doguinhos" },
     { icon: MapPin, text: "Localização na Mooca" },
+    { icon: ShieldCheck, text: "Ambiente seguro" },
   ];
 
   const delay = (i: number) => ({ animationDelay: `${i * 110}ms` } as React.CSSProperties);
@@ -198,7 +199,7 @@ function BioLink() {
             <PawPrint className="h-5 w-5 text-primary" />
             Nossos diferenciais
           </h3>
-          <ul className="grid grid-cols-3 gap-2.5 sm:grid-cols-5">
+          <ul className="grid grid-cols-3 gap-2.5 sm:grid-cols-6">
             {features.map((f, i) => (
               <li
                 key={f.text}
